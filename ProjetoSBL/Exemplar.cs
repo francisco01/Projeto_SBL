@@ -8,12 +8,18 @@ namespace ProjetoSBL
 {
     class Exemplar
     {
-        public bool dobra;
-        public bool anotacao;
-        public string situacao;
-        public string entrega;
-        public Livro livro;
-        public Responsavel responsavel;
+        public bool dobra { get; set; }
+        public bool anotacao { get; set; }
+        public string situacao { get; set; }
+        public string entrega { get; set; }
+        public Livro livro { get; set; }
+        public Responsavel responsavel { get; set; }
+
+
+        public bool cadastrarExemplar()
+        {
+            return true;
+        }
 
     }
 }

@@ -8,6 +8,6 @@ namespace ProjetoSBL
 {
     class Preco
     {
-        public double preco;
+        public double preco { get; set; }
     }
 }

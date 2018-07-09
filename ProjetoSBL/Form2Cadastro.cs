@@ -24,6 +24,10 @@ namespace ProjetoSBL
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
+            voltar();
+        }
+        private void voltar()
+        {
             formlogin.Show();
             this.Hide();
         }
@@ -38,45 +42,15 @@ namespace ProjetoSBL
             usu.login = txtLogin.Text;
             usu.senha = txtSenha.Text;
             usu.responsavel = respon;
-            cadastrarResponsavel();
-            cadastraLogin();
-        }
-        private void cadastrarResponsavel()
-        {
-            try
+            if (respon.cadastrarResponsavel())
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO responsavel(CPF, Nome, Telefone, Email, Endereco)" + "VALUES( '" + respon.cpf.Trim() + "','" + respon.nome.Trim() + "','" + respon.telefone.Trim() + "', '" + respon.email.Trim() + "', '" + respon.endereco.Trim() + "' )", databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                commandDatabase.ExecuteNonQuery();
-                databaseConnection.Close();
+                voltar();
             }
-            catch (Exception ex)
+            if (usu.cadastraLoginUsuario())
             {
-
+                voltar();
             }
-        }
-        private void cadastraLogin()
-        {
-            try
-            {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO usuario(Login, Senha, Responsavel_CPF)" + "VALUES( '" + usu.login.Trim() + "','" + usu.senha.Trim() + "','" + usu.responsavel.cpf.Trim() + "' )", databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                commandDatabase.ExecuteNonQuery();
-                databaseConnection.Close();
-                formlogin.Show();
-                this.Hide();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+            
         }
     }
 }

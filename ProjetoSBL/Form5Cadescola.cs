@@ -37,27 +37,11 @@ namespace ProjetoSBL
             esc.nome = txtNome.Text;
             esc.cnpj = txtCNPJ.Text;
             esc.endereco = txtend.Text;
-            cadastrarEscola();
-        }
-        private void cadastrarEscola()
-        {
-            try
+            if (esc.cadastrarEscola())
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO escola(Nome, CNPJ, Endereco, Usuario_escola_idUsuario_escola)" + "VALUES( '" + esc.nome.Trim() + "','" + esc.cnpj.Trim() + "','" + esc.endereco.Trim() + "', '" + GuardaID.ID + "' )", databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                commandDatabase.ExecuteNonQuery();
-                databaseConnection.Close();
-                MessageBox.Show("Escola cadastrada com sucesso!");
                 voltar();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
+        
     }
 }

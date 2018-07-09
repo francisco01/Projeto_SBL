@@ -30,42 +30,17 @@ namespace ProjetoSBL
         {
             usu.login = txtLogin.Text;
             usu.senha = txtSenha.Text;
-
-            try
+            if (usu.logarResponsavel())
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("select * from usuario where usuario.login = @Login and usuario.senha = @Senha", databaseConnection);
-                commandDatabase.Parameters.Add("@Login", MySqlDbType.VarChar).Value = usu.login;
-                commandDatabase.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = usu.senha;
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader = commandDatabase.ExecuteReader();
-                
-                if (reader.HasRows)
-                {
-                    if (reader.Read())
-                    {
-                        GuardaID.ID = reader.GetInt64(0);
-                        GuardaID.CPF_Resp = reader.GetInt64(3);
-                    }
-                    //MessageBox.Show("");
-                    Form8Opc frmopc = new Form8Opc();
-                    frmopc.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Login ou senha incorreto!");
-                }
-                databaseConnection.Close();
-
+                telaOpcRes();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+        }
+        private void telaOpcRes()
+        {
+            Form8Opc frmopc = new Form8Opc();
+            frmopc.Show();
+            this.Hide();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,42 +48,18 @@ namespace ProjetoSBL
             usu.login = txtLogin.Text;
             usu.senha = txtSenha.Text;
 
-            try
+            if (usu.logarDiretor())
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("select * from usuario_escola where usuario_escola.login = @Login and usuario_escola.senha = @Senha", databaseConnection);
-                commandDatabase.Parameters.Add("@Login", MySqlDbType.VarChar).Value = usu.login;
-                commandDatabase.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = usu.senha;
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                     if (reader.Read())
-                    {
-                        //Session["Salvarid"] = reader.GetUInt32(3);
-                        GuardaID.ID = reader.GetInt64(0);
-                    }
-                    //GuardaID.ID = reader.g;
-                    //MessageBox.Show("OK" + GuardaID.ID);
-                    Form4Opcoes frmopc = new Form4Opcoes();
-                    frmopc.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Login ou senha incorreto!");
-                }
-                databaseConnection.Close();
-
+                telaOpcDir();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
 
-            }
+        }
+
+        private void telaOpcDir()
+        {
+            Form4Opcoes frmopc = new Form4Opcoes();
+            frmopc.Show();
+            this.Hide();
         }
     }
 }

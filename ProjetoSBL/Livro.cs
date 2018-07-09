@@ -8,14 +8,13 @@ namespace ProjetoSBL
 {
     class Livro
     {
-        public int isbn;
-        public string titulo;
-        public string autor;
-        public string editora;
-        public string edicao;
-        public string ano;
-        public string tipo;
-        public Preco preco;
-        public Lista_ind lista;
+        public string titulo { get; set; }
+        public string autor { get; set; }
+        public string editora { get; set; }
+        public string edicao { get; set; }
+        public string ano { get; set; }
+        public string tipo { get; set; }
+        public Preco preco { get; set; }
+        public Lista_ind lista { get; set; }
     }
 }
