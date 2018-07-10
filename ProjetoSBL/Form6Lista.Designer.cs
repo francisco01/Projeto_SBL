@@ -37,6 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbescola = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -115,11 +118,39 @@
             this.cmbescola.Size = new System.Drawing.Size(121, 21);
             this.cmbescola.TabIndex = 16;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(249, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Informe a escola";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(244, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Preço Sugerido";
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.Location = new System.Drawing.Point(238, 114);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(100, 20);
+            this.txtPreco.TabIndex = 19;
+            // 
             // Form6Lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 278);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbescola);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCad);
@@ -148,5 +179,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbescola;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPreco;
     }
 }

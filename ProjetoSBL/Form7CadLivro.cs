@@ -21,6 +21,8 @@ namespace ProjetoSBL
         Preco prc = new Preco();
         Form4Opcoes frmopc = new Form4Opcoes();
         long idprc;
+        bool aux = false;
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -35,110 +37,32 @@ namespace ProjetoSBL
             livro.edicao = txtedicao.Text;
             livro.ano = txtAno.Text;
             livro.tipo = txtTipo.Text;
-            prc.preco = Convert.ToDouble(txtPreco.Text);
-            cadastraPreco();
-            cadastraLivro();
-        }
-        private void cadastraPreco()
-        {
-            try
-            {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO preco_sugerido(Preco)" + "VALUES( '" + prc.preco + "')", databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                commandDatabase.ExecuteNonQuery();
-                idprc = commandDatabase.LastInsertedId;
-                databaseConnection.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void cadastraLivro()
-        {
-            try
-            {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO livro(Titulo, Autor, Editora, Ano, Edicao, Tipo, Preco_Sugerido_idPreco, Lista_Ind_idLista_Ind)" + "VALUES( '" +livro.titulo.Trim() + "','" + livro.autor.Trim() + "','" + livro.editora.Trim() + "', '" + livro.ano.Trim() + "', '" + livro.edicao.Trim() + "', '" + livro.tipo.Trim() + "', '" + idprc + "', '" + cmbListas.SelectedValue + "' )", databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                commandDatabase.ExecuteNonQuery();
-                databaseConnection.Close();
-                MessageBox.Show("Livro cadastrada com sucesso!");
-                voltar();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void buscarID()
-        {
-            try
-            {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("select * from escola where Usuario_escola_idUsuario_escola ="+ GuardaID.ID + "", databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    if (reader.Read())
-                    {
-                        GuardaID.IDescola = reader.GetInt64(0);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("incorreto!");
-                }
-                databaseConnection.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            livro.cadastrarLivro(idprc, cmbListas);
+            voltar();
+            
         }
 
         private void Form7CadLivro_Load(object sender, EventArgs e)
         {
-            buscarID();
-            try
-            {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("select * from Lista_Ind where Escola_idEscola = '" + GuardaID.IDescola + "' ", databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataAdapter da = new MySqlDataAdapter(commandDatabase);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                cmbListas.DataSource = dt;
-                cmbListas.DisplayMember = "Nivel";
-                cmbListas.ValueMember = "idLista_Ind";
-                databaseConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+            livro.lista.escola.buscarUsuarioEscola();
+            cmbListas.DataSource = livro.lista.buscarListas();
+            cmbListas.DisplayMember = "Nivel";
+            cmbListas.ValueMember = "idLista_Ind";
+            aux = true;
         }
         private void voltar()
         {
             frmopc.Show();
             this.Hide();
+        }
+
+        private void cmbListas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (aux)
+            {
+                idprc = livro.lista.buscarIdPreco(cmbListas);
+                txtPreco.Text = Convert.ToString(livro.preco.buscarPreco(idprc));
+            }
         }
     }
 }

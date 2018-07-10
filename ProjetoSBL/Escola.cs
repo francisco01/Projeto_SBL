@@ -52,13 +52,6 @@ namespace ProjetoSBL
                 da.Fill(dt);
                 databaseConnection.Close();
                 
-                //cmbescola.DataSource = dt;
-
-                //cmbescola.DisplayMember = "Nome";
-                //cmbescola.ValueMember = "idEscola";
-
-                
-
             }
             catch (Exception ex)
             {
@@ -66,6 +59,36 @@ namespace ProjetoSBL
 
             }
             return dt;
+        }
+        public void buscarUsuarioEscola()
+        {
+            try
+            {
+                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand("select * from escola where Usuario_escola_idUsuario_escola =" + GuardaID.ID + "", databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    if (reader.Read())
+                    {
+                        GuardaID.IDescola = reader.GetInt64(0);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("incorreto!");
+                }
+                databaseConnection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

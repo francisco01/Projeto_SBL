@@ -127,21 +127,21 @@
             // 
             this.txtedicao.Location = new System.Drawing.Point(304, 48);
             this.txtedicao.Name = "txtedicao";
-            this.txtedicao.Size = new System.Drawing.Size(138, 20);
+            this.txtedicao.Size = new System.Drawing.Size(121, 20);
             this.txtedicao.TabIndex = 9;
             // 
             // txtAno
             // 
             this.txtAno.Location = new System.Drawing.Point(304, 91);
             this.txtAno.Name = "txtAno";
-            this.txtAno.Size = new System.Drawing.Size(138, 20);
+            this.txtAno.Size = new System.Drawing.Size(121, 20);
             this.txtAno.TabIndex = 10;
             // 
             // txtTipo
             // 
             this.txtTipo.Location = new System.Drawing.Point(304, 135);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(138, 20);
+            this.txtTipo.Size = new System.Drawing.Size(121, 20);
             this.txtTipo.TabIndex = 11;
             // 
             // btnVoltar
@@ -196,6 +196,7 @@
             this.cmbListas.Name = "cmbListas";
             this.cmbListas.Size = new System.Drawing.Size(121, 21);
             this.cmbListas.TabIndex = 17;
+            this.cmbListas.SelectedIndexChanged += new System.EventHandler(this.cmbListas_SelectedIndexChanged);
             // 
             // Form7CadLivro
             // 
