@@ -42,6 +42,14 @@ namespace ProjetoSBL
                 voltar();
             }
         }
-        
+
+        private void btnCad_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtCNPJ.Text.Equals("") || txtNome.Text.Equals("") || txtend.Text.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
+
+        }
     }
 }

@@ -57,5 +57,15 @@ namespace ProjetoSBL
             frmopc.Show();
             this.Hide();
         }
+
+        private void btnCad_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtNivel.Text.Equals("") || txtSerie.Text.Equals("") || txtSerie.Text.Equals("")
+                || txtPreco.Text.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
+
+        }
     }
 }

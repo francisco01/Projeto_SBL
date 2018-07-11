@@ -52,5 +52,16 @@ namespace ProjetoSBL
             }
             
         }
+
+        private void btnCad_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtCPF.Text.Equals("") || txtNome.Text.Equals("") || txtFone.Text.Equals("")
+                || txtend.Text.Equals("") || txtemail.Text.Equals("") || txtLogin.Text.Equals("")
+                || txtSenha.Text.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
+            
+        }
     }
 }

@@ -163,6 +163,7 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCadastrar.MouseEnter += new System.EventHandler(this.btnCadastrar_MouseEnter);
             // 
             // label7
             // 
@@ -175,6 +176,7 @@
             // 
             // txtPreco
             // 
+            this.txtPreco.Enabled = false;
             this.txtPreco.Location = new System.Drawing.Point(122, 183);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(100, 20);

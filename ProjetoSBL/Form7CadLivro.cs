@@ -64,5 +64,16 @@ namespace ProjetoSBL
                 txtPreco.Text = Convert.ToString(livro.preco.buscarPreco(idprc));
             }
         }
+
+        private void btnCadastrar_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtTitulo.Text.Equals("") || txtAutor.Text.Equals("") || txtedicao.Text.Equals("")
+                || txteditora.Text.Equals("") || txtAno.Text.Equals("") || txtTipo.Text.Equals("")
+                || txtPreco.Text.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
+
+        }
     }
 }

@@ -61,6 +61,7 @@
             this.btnCad.Text = "Cadastrar";
             this.btnCad.UseVisualStyleBackColor = true;
             this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
+            this.btnCad.MouseEnter += new System.EventHandler(this.btnCad_MouseEnter);
             // 
             // txtAno
             // 

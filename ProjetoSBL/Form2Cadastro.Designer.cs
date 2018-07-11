@@ -145,6 +145,7 @@
             this.btnCad.Text = "Cadastar";
             this.btnCad.UseVisualStyleBackColor = true;
             this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
+            this.btnCad.MouseEnter += new System.EventHandler(this.btnCad_MouseEnter);
             // 
             // btnVoltar
             // 
@@ -185,6 +186,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(93, 323);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(141, 20);
             this.txtSenha.TabIndex = 16;
             // 
