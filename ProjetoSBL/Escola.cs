@@ -15,6 +15,7 @@ namespace ProjetoSBL
         public string nome { get; set; }
         public string cnpj { get; set; }
         public string endereco { get; set; }
+        MySqlDataReader reader;
 
         public bool cadastrarEscola()
         {
@@ -45,7 +46,7 @@ namespace ProjetoSBL
                 string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
-                MySqlCommand commandDatabase = new MySqlCommand("select * from  escola", databaseConnection);
+                MySqlCommand commandDatabase = new MySqlCommand("select * from escola", databaseConnection);
                 commandDatabase.CommandTimeout = 60;
                 MySqlDataAdapter da = new MySqlDataAdapter(commandDatabase);
                 
@@ -88,6 +89,67 @@ namespace ProjetoSBL
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        public MySqlDataReader buscaEscola()
+        {
+            
+            try
+            {
+                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand("select * from escola where Usuario_escola_idUsuario_escola =" + GuardaID.ID + "", databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                reader = commandDatabase.ExecuteReader();
+                //databaseConnection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            return reader;
+        }
+        public void atualizarEscola()
+        {
+            try
+            {
+                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand("update escola set Nome = '" + this.nome.Trim() + "', CNPJ = '" + this.cnpj.Trim() + "', Endereco = '" + this.endereco.Trim() + "'  where Usuario_escola_idUsuario_escola =" + GuardaID.ID + "", databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                reader = commandDatabase.ExecuteReader();
+                databaseConnection.Close();
+                MessageBox.Show("Dados alterados com sucesso!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+        public void excluirEscola()
+        {
+            try
+            {
+                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand("delete from escola where Usuario_escola_idUsuario_escola =" + GuardaID.ID + "", databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                reader = commandDatabase.ExecuteReader();
+                databaseConnection.Close();
+                MessageBox.Show("Dados excluidos com sucesso!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
         }
     }

@@ -66,5 +66,25 @@ namespace ProjetoSBL
             }
             return aux;
         }
+        public void atualizarPreco(long idprc)
+        {
+            try
+            {
+                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                databaseConnection.Open();
+                MySqlCommand commandDatabase = new MySqlCommand("update preco_sugerido set Preco = '" + this.preco + "' where idPreco =" + idprc + "", databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                databaseConnection.Close();
+                //MessageBox.Show("Dados alterados com sucesso!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
     }
 }

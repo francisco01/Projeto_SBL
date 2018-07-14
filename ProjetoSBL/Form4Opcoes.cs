@@ -37,5 +37,19 @@ namespace ProjetoSBL
             frmlivro.Show();
             this.Hide();
         }
+
+        private void btneditarescola_Click(object sender, EventArgs e)
+        {
+            Form10editarescola frmsco = new Form10editarescola();
+            frmsco.Show();
+            this.Hide();
+        }
+
+        private void btneditarlista_Click(object sender, EventArgs e)
+        {
+            Form11editarlista frmlst = new Form11editarlista();
+            frmlst.Show();
+            this.Hide();
+        }
     }
 }

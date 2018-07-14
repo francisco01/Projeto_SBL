@@ -39,7 +39,6 @@ namespace ProjetoSBL
             lst.ano = txtAno.Text;
             prc.preco = Convert.ToDouble(txtPreco.Text);
             idprc = prc.cadastraPreco();
-            //lst.escola.id = Convert.ToInt64( cmbescola.s);
 
             if (lst.cadastarLista(cmbescola, idprc))
             {

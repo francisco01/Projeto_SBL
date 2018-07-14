@@ -58,6 +58,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form10editarescola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10editarescola.Designer.cs">
+      <DependentUpon>Form10editarescola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11editarlista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11editarlista.Designer.cs">
+      <DependentUpon>Form11editarlista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12Compra.Designer.cs">
+      <DependentUpon>Form12Compra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +128,15 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10editarescola.resx">
+      <DependentUpon>Form10editarescola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11editarlista.resx">
+      <DependentUpon>Form11editarlista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12Compra.resx">
+      <DependentUpon>Form12Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2Cadastro.resx">
       <DependentUpon>Form2Cadastro.cs</DependentUpon>

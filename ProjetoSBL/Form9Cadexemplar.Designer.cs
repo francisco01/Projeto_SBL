@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSituacao = new System.Windows.Forms.TextBox();
             this.txtentrega = new System.Windows.Forms.TextBox();
             this.ckbDobra = new System.Windows.Forms.CheckBox();
             this.ckbAnot = new System.Windows.Forms.CheckBox();
@@ -41,25 +38,10 @@
             this.lblPrc = new System.Windows.Forms.Label();
             this.btnCadexemp = new System.Windows.Forms.Button();
             this.btnvoltar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtSituacao = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dobra";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Anotações";
             // 
             // label3
             // 
@@ -79,13 +61,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Entrega";
             // 
-            // txtSituacao
-            // 
-            this.txtSituacao.Location = new System.Drawing.Point(79, 144);
-            this.txtSituacao.Name = "txtSituacao";
-            this.txtSituacao.Size = new System.Drawing.Size(100, 20);
-            this.txtSituacao.TabIndex = 6;
-            // 
             // txtentrega
             // 
             this.txtentrega.Location = new System.Drawing.Point(79, 187);
@@ -96,7 +71,7 @@
             // ckbDobra
             // 
             this.ckbDobra.AutoSize = true;
-            this.ckbDobra.Location = new System.Drawing.Point(81, 53);
+            this.ckbDobra.Location = new System.Drawing.Point(81, 64);
             this.ckbDobra.Name = "ckbDobra";
             this.ckbDobra.Size = new System.Drawing.Size(58, 17);
             this.ckbDobra.TabIndex = 8;
@@ -106,7 +81,7 @@
             // ckbAnot
             // 
             this.ckbAnot.AutoSize = true;
-            this.ckbAnot.Location = new System.Drawing.Point(81, 99);
+            this.ckbAnot.Location = new System.Drawing.Point(79, 103);
             this.ckbAnot.Name = "ckbAnot";
             this.ckbAnot.Size = new System.Drawing.Size(77, 17);
             this.ckbAnot.TabIndex = 9;
@@ -152,7 +127,7 @@
             // 
             // btnvoltar
             // 
-            this.btnvoltar.Location = new System.Drawing.Point(12, 2);
+            this.btnvoltar.Location = new System.Drawing.Point(12, 12);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(54, 23);
             this.btnvoltar.TabIndex = 14;
@@ -160,11 +135,40 @@
             this.btnvoltar.UseVisualStyleBackColor = true;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(222, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Preço";
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.Location = new System.Drawing.Point(281, 99);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(100, 20);
+            this.txtPreco.TabIndex = 16;
+            // 
+            // txtSituacao
+            // 
+            this.txtSituacao.FormattingEnabled = true;
+            this.txtSituacao.Items.AddRange(new object[] {
+            "Disponivel"});
+            this.txtSituacao.Location = new System.Drawing.Point(79, 144);
+            this.txtSituacao.Name = "txtSituacao";
+            this.txtSituacao.Size = new System.Drawing.Size(121, 21);
+            this.txtSituacao.TabIndex = 17;
+            // 
             // Form9Cadexemplar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 322);
+            this.Controls.Add(this.txtSituacao);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnvoltar);
             this.Controls.Add(this.btnCadexemp);
             this.Controls.Add(this.lblPrc);
@@ -173,11 +177,8 @@
             this.Controls.Add(this.ckbAnot);
             this.Controls.Add(this.ckbDobra);
             this.Controls.Add(this.txtentrega);
-            this.Controls.Add(this.txtSituacao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form9Cadexemplar";
             this.Text = "Form9Cadexemplar";
             this.Load += new System.EventHandler(this.Form9Cadexemplar_Load);
@@ -187,12 +188,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSituacao;
         private System.Windows.Forms.TextBox txtentrega;
         private System.Windows.Forms.CheckBox ckbDobra;
         private System.Windows.Forms.CheckBox ckbAnot;
@@ -201,5 +198,8 @@
         private System.Windows.Forms.Label lblPrc;
         private System.Windows.Forms.Button btnCadexemp;
         private System.Windows.Forms.Button btnvoltar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.ComboBox txtSituacao;
     }
 }

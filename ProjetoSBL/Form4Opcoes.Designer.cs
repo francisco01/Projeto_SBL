@@ -31,6 +31,8 @@
             this.btnCadescola = new System.Windows.Forms.Button();
             this.btnCadLista = new System.Windows.Forms.Button();
             this.btnCadLivro = new System.Windows.Forms.Button();
+            this.btneditarescola = new System.Windows.Forms.Button();
+            this.btneditarlista = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadescola
@@ -63,11 +65,33 @@
             this.btnCadLivro.UseVisualStyleBackColor = true;
             this.btnCadLivro.Click += new System.EventHandler(this.btnCadLivro_Click);
             // 
+            // btneditarescola
+            // 
+            this.btneditarescola.Location = new System.Drawing.Point(213, 41);
+            this.btneditarescola.Name = "btneditarescola";
+            this.btneditarescola.Size = new System.Drawing.Size(97, 23);
+            this.btneditarescola.TabIndex = 3;
+            this.btneditarescola.Text = "Editar escola";
+            this.btneditarescola.UseVisualStyleBackColor = true;
+            this.btneditarescola.Click += new System.EventHandler(this.btneditarescola_Click);
+            // 
+            // btneditarlista
+            // 
+            this.btneditarlista.Location = new System.Drawing.Point(213, 110);
+            this.btneditarlista.Name = "btneditarlista";
+            this.btneditarlista.Size = new System.Drawing.Size(97, 23);
+            this.btneditarlista.TabIndex = 4;
+            this.btneditarlista.Text = "Editar lista";
+            this.btneditarlista.UseVisualStyleBackColor = true;
+            this.btneditarlista.Click += new System.EventHandler(this.btneditarlista_Click);
+            // 
             // Form4Opcoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(351, 261);
+            this.Controls.Add(this.btneditarlista);
+            this.Controls.Add(this.btneditarescola);
             this.Controls.Add(this.btnCadLivro);
             this.Controls.Add(this.btnCadLista);
             this.Controls.Add(this.btnCadescola);
@@ -82,5 +106,7 @@
         private System.Windows.Forms.Button btnCadescola;
         private System.Windows.Forms.Button btnCadLista;
         private System.Windows.Forms.Button btnCadLivro;
+        private System.Windows.Forms.Button btneditarescola;
+        private System.Windows.Forms.Button btneditarlista;
     }
 }

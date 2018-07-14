@@ -21,6 +21,7 @@ namespace ProjetoSBL
         bool flag = false;
         Exemplar xmp = new Exemplar();
         long aux;
+        double prc;
         
         private void Form9Cadexemplar_Load(object sender, EventArgs e)
         {
@@ -35,8 +36,8 @@ namespace ProjetoSBL
             if (flag)
             {
                 aux = xmp.livro.buscarIdPrecoLivro(cmbLivro);
-                double prc = xmp.livro.preco.buscarPreco(aux);
-                lblPrc.Text = "Preço sugerido R$ " + prc;  
+                prc = xmp.livro.preco.buscarPreco(aux);
+                lblPrc.Text = "Preço sugerido R$: " + prc;  
             }
         }
 
@@ -44,6 +45,8 @@ namespace ProjetoSBL
         {
             xmp.situacao = txtSituacao.Text;
             xmp.entrega = txtentrega.Text;
+            xmp.preco = Convert.ToDouble(txtPreco.Text);
+            
             if (ckbAnot.Checked)
             {
                 xmp.anotacao = 1;
@@ -52,8 +55,16 @@ namespace ProjetoSBL
             {
                 xmp.dobra = 1;
             }
-            xmp.cadastrarExemplar(cmbLivro, aux);
-            voltar();
+            if (xmp.preco > prc)
+            {
+                MessageBox.Show("Preço não pode ser maior do que o preço sugerido!");
+            }
+            else
+            {
+                xmp.cadastrarExemplar(cmbLivro, aux);
+                voltar();
+            }
+            
         }
 
         private void btnvoltar_Click(object sender, EventArgs e)

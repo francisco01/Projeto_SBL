@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mydbDataSet" targetNamespace="http://tempuri.org/mydbDataSet.xsd" xmlns:mstns="http://tempuri.org/mydbDataSet.xsd" xmlns="http://tempuri.org/mydbDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mydbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mydbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjetoSBL.Properties.Settings.GlobalReference.Default.mydbConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="exemplarTableAdapter" GeneratorDataComponentClassName="exemplarTableAdapter" Name="exemplar" UserDataComponentName="exemplarTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString (Settings)" DbObjectName="mydb.exemplar" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dobra, Anotacao, Situacao, Entrega, Preco FROM exemplar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mydbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mydbDataSet" msprop:Generator_UserDSName="mydbDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="exemplar" msprop:Generator_TableClassName="exemplarDataTable" msprop:Generator_TableVarName="tableexemplar" msprop:Generator_TablePropName="exemplar" msprop:Generator_RowDeletingName="exemplarRowDeleting" msprop:Generator_RowChangingName="exemplarRowChanging" msprop:Generator_RowEvHandlerName="exemplarRowChangeEventHandler" msprop:Generator_RowDeletedName="exemplarRowDeleted" msprop:Generator_UserTableName="exemplar" msprop:Generator_RowChangedName="exemplarRowChanged" msprop:Generator_RowEvArgName="exemplarRowChangeEvent" msprop:Generator_RowClassName="exemplarRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

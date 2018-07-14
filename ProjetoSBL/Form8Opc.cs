@@ -24,5 +24,12 @@ namespace ProjetoSBL
             frmxmp.Show();
             this.Hide();
         }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            Form12Compra frmcompra = new Form12Compra();
+            frmcompra.Show();
+            this.Hide();
+        }
     }
 }
