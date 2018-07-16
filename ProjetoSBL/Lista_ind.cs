@@ -21,7 +21,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO lista_ind(Nivel, Serie, Ano, Escola_idEscola, Preco_Sugerido_idPreco)" + "VALUES( '" + this.nivel.Trim() + "','" + this.serie.Trim() + "','" + this.ano.Trim() + "', '" + cmb.SelectedValue + "', '" + idprc + "' )", databaseConnection);
@@ -42,7 +42,7 @@ namespace ProjetoSBL
             long aux = 0;
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from lista_ind where idLista_Ind =" + cmb.SelectedValue + "", databaseConnection);
@@ -74,7 +74,7 @@ namespace ProjetoSBL
             DataTable dt = new DataTable();
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from Lista_Ind where Escola_idEscola = '" + GuardaID.IDescola + "' ", databaseConnection);
@@ -94,7 +94,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from lista_ind where idLista_Ind =" + cmb.SelectedValue + "", databaseConnection);
@@ -113,7 +113,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("update lista_ind set Nivel = '" + this.nivel.Trim() + "', Serie = '" + this.serie.Trim() + "', Ano = '" + this.ano.Trim() + "'  where Escola_idEscola =" + GuardaID.IDescola + "", databaseConnection);
@@ -133,7 +133,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("delete from lista_ind where Escola_idEscola =" + GuardaID.IDescola + "", databaseConnection);
@@ -154,7 +154,7 @@ namespace ProjetoSBL
             DataTable dt = new DataTable();
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from Lista_Ind ", databaseConnection);

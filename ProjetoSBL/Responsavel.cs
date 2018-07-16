@@ -20,7 +20,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO responsavel(CPF, Nome, Telefone, Email, Endereco)" + "VALUES( '" + this.cpf.Trim() + "','" + this.nome.Trim() + "','" + this.telefone.Trim() + "', '" + this.email.Trim() + "', '" + this.endereco.Trim() + "' )", databaseConnection);

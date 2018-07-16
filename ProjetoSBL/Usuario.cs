@@ -18,7 +18,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from usuario where usuario.login = @Login and usuario.senha = @Senha", databaseConnection);
@@ -56,7 +56,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from usuario_escola where usuario_escola.login = @Login and usuario_escola.senha = @Senha", databaseConnection);
@@ -96,7 +96,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO usuario(Login, Senha, Responsavel_CPF)" + "VALUES( '" + this.login.Trim() + "','" + this.senha.Trim() + "','" + this.responsavel.cpf.Trim() + "' )", databaseConnection);

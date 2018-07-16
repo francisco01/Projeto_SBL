@@ -24,7 +24,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("INSERT INTO livro(Titulo, Autor, Editora, Ano, Edicao, Tipo, Preco_Sugerido_idPreco, Lista_Ind_idLista_Ind)" + "VALUES( '" + this.titulo.Trim() + "','" + this.autor.Trim() + "','" + this.editora.Trim() + "', '" + this.ano.Trim() + "', '" + this.edicao.Trim() + "', '" + this.tipo.Trim() + "', '" + idprc + "', '" + cmb.SelectedValue + "' )", databaseConnection);
@@ -44,7 +44,7 @@ namespace ProjetoSBL
             DataTable dt = new DataTable();
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from  Livro", databaseConnection);
@@ -66,7 +66,7 @@ namespace ProjetoSBL
             long idprc = 0;
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select Preco_Sugerido_idPreco from Livro where ISBN = " + cmb.SelectedValue + " ", databaseConnection);
@@ -94,7 +94,7 @@ namespace ProjetoSBL
             DataTable dt = new DataTable();
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select * from Livro where Lista_Ind_idLista_Ind = " + cmb.SelectedValue + " ", databaseConnection);

@@ -213,7 +213,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form2Cadastro";
-            this.Text = "Form2Cadastro";
+            this.Text = "Cadastrar Usuário";
             this.ResumeLayout(false);
             this.PerformLayout();
 

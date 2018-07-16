@@ -55,7 +55,7 @@ namespace ProjetoSBL
             {
                 //string aux = DropDownServ.SelectedValue.Trim();
                 //conexão;
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("select idExemplar as Codigo, Dobra, Anotacao, Situacao, Entrega, Preco from exemplar where Livro_ISBN = " + cmb.SelectedValue + " and Situacao like 'disponivel%' ", databaseConnection);
@@ -93,7 +93,7 @@ namespace ProjetoSBL
         {
             try
             {
-                string connectionString = "datasource=localhost;port=3306;username=root;password=s3t3mbr0;database=mydb;";
+                string connectionString = "datasource=localhost;port=3306;username=root;password=mysql;database=mydb;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 databaseConnection.Open();
                 MySqlCommand commandDatabase = new MySqlCommand("update exemplar set Responsavel_CPF = '" + GuardaID.CPF_Resp + "', Situacao = 'Comprado'  where idExemplar =" + Convert.ToInt64(idexemplar) +" ", databaseConnection);

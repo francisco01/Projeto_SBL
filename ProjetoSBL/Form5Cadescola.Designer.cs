@@ -121,7 +121,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form5Cadescola";
-            this.Text = "Form5Cadescola";
+            this.Text = "Cadastra Escola";
             this.ResumeLayout(false);
             this.PerformLayout();
 

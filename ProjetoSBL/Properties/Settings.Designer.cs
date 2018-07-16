@@ -26,7 +26,7 @@ namespace ProjetoSBL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=s3t3mbr0;persistsecurityinfo=True;database" +
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=mysql;persistsecurityinfo=True;database" +
             "=mydb;allowuservariables=True")]
         public string mydbConnectionString {
             get {

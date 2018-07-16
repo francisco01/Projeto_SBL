@@ -57,7 +57,7 @@
             // 
             // btnCadLivro
             // 
-            this.btnCadLivro.Location = new System.Drawing.Point(12, 188);
+            this.btnCadLivro.Location = new System.Drawing.Point(12, 175);
             this.btnCadLivro.Name = "btnCadLivro";
             this.btnCadLivro.Size = new System.Drawing.Size(110, 23);
             this.btnCadLivro.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.Controls.Add(this.btnCadLista);
             this.Controls.Add(this.btnCadescola);
             this.Name = "Form4Opcoes";
-            this.Text = "Form4Opcoes";
+            this.Text = "Menu";
             this.ResumeLayout(false);
 
         }

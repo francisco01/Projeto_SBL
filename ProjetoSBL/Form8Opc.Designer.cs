@@ -60,7 +60,7 @@
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.btnComprar);
             this.Name = "Form8Opc";
-            this.Text = "Form8Opc";
+            this.Text = "Menu";
             this.ResumeLayout(false);
 
         }

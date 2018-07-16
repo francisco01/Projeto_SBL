@@ -33,8 +33,8 @@
             this.cmbLista = new System.Windows.Forms.ComboBox();
             this.cmbLivro = new System.Windows.Forms.ComboBox();
             this.grdvexemplar = new System.Windows.Forms.DataGridView();
-            this.btnvoltar = new System.Windows.Forms.Button();
             this.comprar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnvoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdvexemplar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,16 +88,6 @@
             this.grdvexemplar.TabIndex = 4;
             this.grdvexemplar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdvexemplar_CellContentClick);
             // 
-            // btnvoltar
-            // 
-            this.btnvoltar.Location = new System.Drawing.Point(11, 6);
-            this.btnvoltar.Name = "btnvoltar";
-            this.btnvoltar.Size = new System.Drawing.Size(65, 20);
-            this.btnvoltar.TabIndex = 5;
-            this.btnvoltar.Text = "Voltar";
-            this.btnvoltar.UseVisualStyleBackColor = true;
-            this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
-            // 
             // comprar
             // 
             this.comprar.DataPropertyName = "txt";
@@ -107,6 +97,16 @@
             this.comprar.ReadOnly = true;
             this.comprar.Text = "Comprar";
             this.comprar.UseColumnTextForButtonValue = true;
+            // 
+            // btnvoltar
+            // 
+            this.btnvoltar.Location = new System.Drawing.Point(11, 6);
+            this.btnvoltar.Name = "btnvoltar";
+            this.btnvoltar.Size = new System.Drawing.Size(65, 20);
+            this.btnvoltar.TabIndex = 5;
+            this.btnvoltar.Text = "Voltar";
+            this.btnvoltar.UseVisualStyleBackColor = true;
+            this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
             // 
             // Form12Compra
             // 
@@ -120,7 +120,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form12Compra";
-            this.Text = "Form12Compra";
+            this.Text = "Lista de Compras";
             this.Load += new System.EventHandler(this.Form12Compra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdvexemplar)).EndInit();
             this.ResumeLayout(false);

@@ -47,7 +47,7 @@
             // txtPreco
             // 
             this.txtPreco.Enabled = false;
-            this.txtPreco.Location = new System.Drawing.Point(244, 113);
+            this.txtPreco.Location = new System.Drawing.Point(305, 126);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(100, 20);
             this.txtPreco.TabIndex = 31;
@@ -55,25 +55,25 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(250, 85);
+            this.label5.Location = new System.Drawing.Point(218, 129);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 30;
-            this.label5.Text = "Preço Sugerido";
+            this.label5.Text = "Preço Sugerido:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(255, 22);
+            this.label4.Location = new System.Drawing.Point(33, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Informe a lista";
+            this.label4.Text = "Slecione a Lista :";
             // 
             // cmbLista
             // 
             this.cmbLista.FormattingEnabled = true;
-            this.cmbLista.Location = new System.Drawing.Point(244, 45);
+            this.cmbLista.Location = new System.Drawing.Point(133, 58);
             this.cmbLista.Name = "cmbLista";
             this.cmbLista.Size = new System.Drawing.Size(121, 21);
             this.cmbLista.TabIndex = 28;
@@ -83,15 +83,15 @@
             // 
             this.btnVoltar.Location = new System.Drawing.Point(14, 9);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(55, 23);
+            this.btnVoltar.Size = new System.Drawing.Size(65, 26);
             this.btnVoltar.TabIndex = 27;
-            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.Text = "<< Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(152, 258);
+            this.btnAtualizar.Location = new System.Drawing.Point(162, 288);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 26;
@@ -102,15 +102,15 @@
             // txtAno
             // 
             this.txtAno.Enabled = false;
-            this.txtAno.Location = new System.Drawing.Point(75, 184);
+            this.txtAno.Location = new System.Drawing.Point(310, 176);
             this.txtAno.Name = "txtAno";
-            this.txtAno.Size = new System.Drawing.Size(110, 20);
+            this.txtAno.Size = new System.Drawing.Size(95, 20);
             this.txtAno.TabIndex = 25;
             // 
             // txtSerie
             // 
             this.txtSerie.Enabled = false;
-            this.txtSerie.Location = new System.Drawing.Point(75, 132);
+            this.txtSerie.Location = new System.Drawing.Point(72, 179);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(110, 20);
             this.txtSerie.TabIndex = 24;
@@ -118,7 +118,7 @@
             // txtNivel
             // 
             this.txtNivel.Enabled = false;
-            this.txtNivel.Location = new System.Drawing.Point(75, 82);
+            this.txtNivel.Location = new System.Drawing.Point(72, 129);
             this.txtNivel.Name = "txtNivel";
             this.txtNivel.Size = new System.Drawing.Size(110, 20);
             this.txtNivel.TabIndex = 23;
@@ -126,33 +126,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 187);
+            this.label3.Location = new System.Drawing.Point(269, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Ano";
+            this.label3.Text = "Ano :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 135);
+            this.label2.Location = new System.Drawing.Point(31, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Serie";
+            this.label2.Text = "Série :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 85);
+            this.label1.Location = new System.Drawing.Point(31, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Nivel";
+            this.label1.Text = "Nível:";
             // 
             // btneditar
             // 
-            this.btneditar.Location = new System.Drawing.Point(27, 258);
+            this.btneditar.Location = new System.Drawing.Point(37, 288);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(75, 23);
             this.btneditar.TabIndex = 32;
@@ -162,7 +162,7 @@
             // 
             // btnexcluir
             // 
-            this.btnexcluir.Location = new System.Drawing.Point(285, 258);
+            this.btnexcluir.Location = new System.Drawing.Point(295, 288);
             this.btnexcluir.Name = "btnexcluir";
             this.btnexcluir.Size = new System.Drawing.Size(75, 23);
             this.btnexcluir.TabIndex = 33;
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 313);
+            this.ClientSize = new System.Drawing.Size(419, 347);
             this.Controls.Add(this.btnexcluir);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.txtPreco);
@@ -190,7 +190,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form11editarlista";
-            this.Text = "Form11editarlista";
+            this.Text = "Edição de Lista";
             this.Load += new System.EventHandler(this.Form11editarlista_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
