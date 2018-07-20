@@ -36,19 +36,19 @@
             // 
             this.btnComprar.Location = new System.Drawing.Point(37, 67);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(75, 60);
+            this.btnComprar.Size = new System.Drawing.Size(92, 60);
             this.btnComprar.TabIndex = 0;
-            this.btnComprar.Text = "Vender Livro";
+            this.btnComprar.Text = "Cadastrar exempla P/ venda";
             this.btnComprar.UseVisualStyleBackColor = true;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // btnVender
             // 
-            this.btnVender.Location = new System.Drawing.Point(167, 67);
+            this.btnVender.Location = new System.Drawing.Point(155, 67);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(76, 60);
+            this.btnVender.Size = new System.Drawing.Size(88, 60);
             this.btnVender.TabIndex = 1;
-            this.btnVender.Text = "Compar Livro";
+            this.btnVender.Text = "Compar exemplar";
             this.btnVender.UseVisualStyleBackColor = true;
             this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
